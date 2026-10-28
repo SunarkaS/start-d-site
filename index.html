@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стар-Д — автосервис на Савушкина, 89 | Санкт-Петербург</title>
+<meta name="description" content="Автосервис Стар-Д в Приморском районе Санкт-Петербурга: ТО, замена масла и фильтров, ремонт и заправка кондиционеров, автоэлектрика. Савушкина ул., 89. Ежедневно 08:30–20:30.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0c0f;--panel:#12161c;--panel2:#171c24;--line:rgba(255,255,255,.09);--text:#eef1f5;--muted:#98a2b3;--accent:#2f7cf6;--accent2:#61a3ff;--gold:#d8b26a;--r:14px;--max:1240px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  h2{font-family:'Oswald',sans-serif;font-size:clamp(28px,3.4vw,44px);line-height:1.1;text-transform:uppercase;letter-spacing:.02em;font-weight:600}
+  .lead{color:var(--muted);font-size:17px;max-width:640px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:10px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.25s;font-family:inherit}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 30px rgba(47,124,246,.28)}
+  .btn-primary:hover{background:#3d88ff;transform:translateY(-2px)}
+  .btn-ghost{border-color:rgba(255,255,255,.22);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  header{position:fixed;inset:0 0 auto 0;z-index:100;transition:.3s;border-bottom:1px solid transparent}
+  header.solid{background:rgba(10,12,15,.88);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+  .logo{display:flex;align-items:center;gap:11px;font-family:'Oswald',sans-serif;font-size:21px;letter-spacing:.06em;font-weight:600}
+  .logo b{color:var(--accent)}
+  .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,var(--accent),#12489c);display:grid;place-items:center;font-size:14px;font-weight:800}
+  .menu{display:flex;gap:28px;font-size:14.5px;font-weight:600}
+  .menu a{color:var(--muted);transition:.2s}
+  .menu a:hover{color:#fff}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-phone{font-weight:700;font-size:15.5px;white-space:nowrap}
+  .nav-phone:hover{color:var(--accent2)}
+  .nav .btn{padding:12px 20px;font-size:14px}
+  .hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:flex-end;padding:150px 0 64px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.04);animation:zoom 26s ease-in-out infinite alternate}
+  @keyframes zoom{to{transform:scale(1.12)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,13,.88) 0%,rgba(8,10,13,.55) 40%,rgba(8,10,13,.97) 100%)}
+  .hero .wrap{position:relative;z-index:2;width:100%}
+  .hero h1{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:clamp(34px,5.2vw,66px);line-height:1;margin:18px 0 22px;max-width:19ch}
+  .hero h1 em{font-style:normal;color:var(--accent2);white-space:nowrap}
+  .hero .lead{font-size:19px;max-width:560px;color:#c7cfdb}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .rating-pill{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);padding:9px 16px 9px 10px;border-radius:100px;backdrop-filter:blur(8px);font-size:14px}
+  .rating-pill b{font-size:16px}
+  .rating-pill .score{background:var(--gold);color:#1a1405;font-weight:800;border-radius:100px;padding:4px 10px;font-size:14px}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#b8c2d0}
+  .hero-facts span{display:flex;align-items:center;gap:8px}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--accent2)}
+  section{padding:88px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+  .sec-head h2{margin-top:10px}
+  .adv{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .adv-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .adv-card .num{font-family:'Oswald',sans-serif;font-size:32px;color:var(--accent);line-height:1;margin-bottom:14px}
+  .adv-card h3{font-size:16px;margin-bottom:8px}
+  .adv-card p{font-size:14px;color:var(--muted)}
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .svc{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.3s}
+  .svc:hover{transform:translateY(-4px);border-color:rgba(47,124,246,.45)}
+  .svc .ico{font-size:26px;margin-bottom:16px}
+  .svc h3{font-size:18px;margin-bottom:8px}
+  .svc p{font-size:14px;color:var(--muted);margin-bottom:18px;min-height:44px}
+  .svc .price{font-family:'Oswald',sans-serif;font-size:22px;padding-top:16px;border-top:1px solid var(--line)}
+  .price-list{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px 28px}
+  .price-row{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .price-row span:last-child{white-space:nowrap;font-weight:700}
+  .price-note{margin-top:16px;font-size:13px;color:var(--muted)}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gallery a{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--panel)}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .gallery a:hover img{transform:scale(1.06)}
+  .gallery a:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+  .reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .rev{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column}
+  .rev-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .rev-ava{width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--panel2);border:1px solid var(--line)}
+  .rev-name{font-weight:700;font-size:15.5px}
+  .rev-meta{font-size:12.5px;color:var(--muted)}
+  .rev-stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px}
+  .rev-text{font-size:14.5px;color:#c9d2e0;flex:1}
+  .rev-text.clamp{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+  .rev-more{margin-top:12px;background:none;border:none;color:var(--accent2);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;padding:0;text-align:left}
+  .rev-sum{display:flex;align-items:center;gap:18px}
+  .rev-sum .big{font-family:'Oswald',sans-serif;font-size:48px;line-height:1}
+  .rev-sum .stars-big{color:var(--gold);font-size:18px;letter-spacing:3px}
+  .map-wrap{display:grid;grid-template-columns:1.15fr .85fr;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--panel)}
+  .map-wrap iframe{width:100%;height:520px;border:0;filter:grayscale(.25) contrast(1.05)}
+  .contacts{padding:38px}
+  .contacts h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+  .contacts h3:first-child{margin-top:0}
+  .contacts .big{font-size:24px;font-weight:800}
+  .contacts .big a:hover{color:var(--accent2)}
+  .contacts p{color:#c9d2e0;font-size:15px}
+  .socials{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+  .socials a{padding:10px 18px;border:1px solid var(--line);border-radius:100px;font-size:13.5px;font-weight:600;transition:.2s}
+  .socials a:hover{border-color:var(--accent);color:var(--accent2)}
+  .cta{background:linear-gradient(120deg,#11213c,#0a0c0f 62%);border:1px solid var(--line);border-radius:20px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+  .cta h2{max-width:18ch}
+  .cta p{color:var(--muted);margin-top:10px}
+  footer{border-top:1px solid var(--line);padding:44px 0 34px;color:var(--muted);font-size:14px}
+  .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center}
+  .foot-note{margin-top:22px;font-size:12.5px;color:#6d788a;max-width:900px}
+  .overlay{position:fixed;inset:0;background:rgba(4,6,9,.78);backdrop-filter:blur(6px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+  .overlay.on{display:flex}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:38px;max-width:460px;width:100%;position:relative}
+  .modal h3{font-family:'Oswald',sans-serif;font-size:26px;text-transform:uppercase;margin-bottom:8px}
+  .modal p{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+  .modal input,.modal select{width:100%;padding:14px 16px;margin-bottom:12px;border-radius:10px;border:1px solid var(--line);background:#0d1117;color:var(--text);font-family:inherit;font-size:15px}
+  .modal input:focus,.modal select:focus{outline:none;border-color:var(--accent)}
+  .modal .btn{width:100%;justify-content:center;margin-top:6px}
+  .close{position:absolute;top:14px;right:18px;background:none;border:none;color:var(--muted);font-size:26px;cursor:pointer;line-height:1}
+  .close:hover{color:#fff}
+  .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media(max-width:1024px){.adv{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.map-wrap{grid-template-columns:1fr}.map-wrap iframe{height:380px}}
+  @media(max-width:760px){.menu{display:none}.nav-phone{display:none}.services,.adv,.reviews{grid-template-columns:1fr}.price-list{grid-template-columns:1fr;padding:6px 20px}.gallery{grid-template-columns:repeat(2,1fr)}.gallery a:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}section{padding:60px 0}.cta{padding:32px}.contacts{padding:26px}.modal{padding:26px}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="logo-mark">СД</span>СТАР<b>-</b>Д</a>
+    <nav class="menu">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#works">Сервис</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:+79013067874" class="nav-phone">+7 (901) 306-78-74</a>
+      <button class="btn btn-primary" onclick="openModal()">Записаться</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" style="background-image:url('https://avatars.mds.yandex.net/get-altay/247136/2a0000015b16f6b904c694d4656582706fb5/XXL')"></div>
+  <div class="wrap">
+    <div class="eyebrow">Приморский район · ул. Савушкина, 89</div>
+    <h1>Автосервис <em>Стар-Д</em></h1>
+    <p class="lead">ТО, замена масла и фильтров, кондиционеры и автоэлектрика. Работаем ежедневно с 08:30 до 20:30 — без записи за неделю.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="openModal()">Записаться</button>
+      <a class="btn btn-ghost" href="#prices">Смотреть цены</a>
+    </div>
+    <div class="hero-facts">
+      <span><i class="dot"></i>ежедневно, 08:30–20:30</span>
+      <span><i class="dot"></i>м. Старая Деревня</span>
+      <span><i class="dot"></i>Оплата картой · мойка · развал-схождение</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="adv reveal">
+      <div class="adv-card"><div class="num">4,5</div><h3>Рейтинг на Яндекс.Картах</h3><p>57 отзывов, 136 оценок. 31 из них — на пять звёзд.</p></div>
+      <div class="adv-card"><div class="num">12 ч</div><h3>Работаем каждый день</h3><p>С 08:30 до 20:30, включая выходные. Удобно заехать до или после работы.</p></div>
+      <div class="adv-card"><div class="num">ТО</div><h3>Быстрое обслуживание</h3><p>Замена масла от 500 ₽, фильтров от 300 ₽. Расходники привозим сами.</p></div>
+      <div class="adv-card"><div class="num">❄️</div><h3>Кондиционеры</h3><p>Заправка, чистка и ремонт автокондиционеров — профильное направление сервиса.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Что делаем</div><h2>Услуги сервиса</h2></div>
+      <p class="lead" style="margin:0">От планового ТО до ремонта электрики и кондиционера.</p>
+    </div>
+    <div class="services">
+      <div class="svc reveal"><div class="ico">🛢</div><h3>ТО и замена масла</h3><p>Плановое обслуживание по регламенту: масло, фильтры, свечи, осмотр.</p><div class="price">от 500 ₽</div></div><div class="svc reveal"><div class="ico">❄️</div><h3>Кондиционеры</h3><p>Заправка, чистка и ремонт автокондиционеров, поиск утечек.</p><div class="price">от 1 500 ₽</div></div><div class="svc reveal"><div class="ico">⚡</div><h3>Электрика</h3><p>Стартеры, генераторы, проводка — диагностика и ремонт.</p><div class="price">от 800 ₽</div></div><div class="svc reveal"><div class="ico">🔧</div><h3>Ходовая и подвеска</h3><p>Осмотр, диагностика, замена изношенных узлов.</p><div class="price">по осмотру</div></div><div class="svc reveal"><div class="ico">💡</div><h3>Свет фар</h3><p>Регулировка света фар на стенде — чтобы не слепить встречных.</p><div class="price">400 ₽</div></div><div class="svc reveal"><div class="ico">🧰</div><h3>Мелкий ремонт</h3><p>Глушитель, сварка, крепёж и прочие текущие работы.</p><div class="price">по осмотру</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="prices" style="background:#0c0f13">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Прайс-лист</div><h2>Цены на работы</h2></div>
+      <p class="lead" style="margin:0">Стоимость работ без учёта запчастей. Итог называем после осмотра.</p>
+    </div>
+    <div class="price-list reveal">
+      <div class="price-row"><span>Замена воздушного фильтра</span><span>300 ₽</span></div><div class="price-row"><span>Замена масел</span><span>500 ₽</span></div><div class="price-row"><span>Замена масляного фильтра</span><span>300 ₽</span></div><div class="price-row"><span>Замена салонного фильтра</span><span>500 ₽</span></div><div class="price-row"><span>Замена свечей</span><span>800 ₽</span></div><div class="price-row"><span>Замена топливного фильтра</span><span>300 ₽</span></div><div class="price-row"><span>Заправка кондиционеров</span><span>2500 ₽</span></div><div class="price-row"><span>Регулировка света фар</span><span>400 ₽</span></div><div class="price-row"><span>Ремонт генераторов</span><span>1800 ₽</span></div><div class="price-row"><span>Ремонт кондиционеров</span><span>2000 ₽</span></div><div class="price-row"><span>Ремонт стартеров</span><span>1500 ₽</span></div><div class="price-row"><span>Ремонт электропроводки</span><span>800 ₽</span></div><div class="price-row"><span>Техническое обслуживание</span><span>600 ₽</span></div><div class="price-row"><span>Чистка кондиционеров</span><span>1500 ₽</span></div>
+    </div>
+    <p class="price-note">Цены носят информационный характер и не являются публичной офертой.</p>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Как выглядит</div><h2>Наш сервис</h2></div>
+      <p class="lead" style="margin:0">Боксы, подъёмники и зона ожидания. Фото — из карточки сервиса.</p>
+    </div>
+    <div class="gallery reveal">
+      <a href="https://avatars.mds.yandex.net/get-altay/247136/2a0000015b16f6b904c694d4656582706fb5/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/247136/2a0000015b16f6b904c694d4656582706fb5/L" alt="Фото сервиса Стар-Д 1" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/1651981/2a0000016fb2780b5d27856c6502564d899c/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/1651981/2a0000016fb2780b5d27856c6502564d899c/L" alt="Фото сервиса Стар-Д 2" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/1246719/2a00000163e6d13a9eba03ba9b6f8bbd3ef6/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/1246719/2a00000163e6d13a9eba03ba9b6f8bbd3ef6/L" alt="Фото сервиса Стар-Д 3" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/236825/2a0000015b3b5e8d88611d45d5be262e663f/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/236825/2a0000015b3b5e8d88611d45d5be262e663f/L" alt="Фото сервиса Стар-Д 4" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/10768923/2a0000018d0b877462330aa463f4f5185255/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/10768923/2a0000018d0b877462330aa463f4f5185255/L" alt="Фото сервиса Стар-Д 5" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/15291179/2a00000197df829b12ff21544206c5927a4e/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/15291179/2a00000197df829b12ff21544206c5927a4e/L" alt="Фото сервиса Стар-Д 6" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/1773749/2a0000016e46f27c96ba345fca68f9ec2f28/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/1773749/2a0000016e46f27c96ba345fca68f9ec2f28/L" alt="Фото сервиса Стар-Д 7" loading="lazy"></a><a href="https://avatars.mds.yandex.net/get-altay/15045776/2a00000197df835a08823a2e35d281c65872/XXL" target="_blank" rel="noopener"><img src="https://avatars.mds.yandex.net/get-altay/15045776/2a00000197df835a08823a2e35d281c65872/L" alt="Фото сервиса Стар-Д 8" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#0c0f13">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Что говорят</div><h2>Отзывы клиентов</h2></div>
+      <div class="rev-sum"><div class="big">5,0</div><div><div class="stars-big">★★★★★</div><div class="rev-meta">10 отзывов с оценкой 5 из 57 на Яндекс.Картах</div></div></div>
+    </div>
+    <div class="reviews">
+      
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/36689/enc-be8d9094daf795d92daf89893100dc67248bebbcf25ab33246e9811f1fff6fe7/100x100" alt="Максим Самсонов" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Максим Самсонов</div><div class="rev-meta">Знаток города 7 уровня · 01.09.2026</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt0">Хорошо делают, сразу есть всё, магазин мойка, ремзона</p>
+        <button class="rev-more" onclick="toggleRev(0, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/41409/ck1w1nkB6E4J211tnzNzblT1M8-1/100x100" alt="Елена Черкасова" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Елена Черкасова</div><div class="rev-meta">Знаток города 12 уровня · 03.04.2025</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt1">Внимательное отношение, адекватные цены. Обращалась неоднократно по разным поводам (кузовные работы, ремонт, развал-схождение). Все работы были выполнены качественно и в оговоренные сроки.</p>
+        <button class="rev-more" onclick="toggleRev(1, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/27503/0h-8/100x100" alt="геннадий воронов" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">геннадий воронов</div><div class="rev-meta">Знаток города 3 уровня · 13.11.2024</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt2">09.10.2024 Заехал устранить проблему на глушителе и выявить причину падения оборотов до&quot;0&quot;, машина на холостых &quot;глохла&quot; и приходилось с подгазовкой добираться до правой полосы. До этого на &quot;галстуке&quot; притащили к Стар-Д. Хочется отметить оперативную работу сварщика Филипа и опытного электрика Дмитрия Валерьевича. Ранее мои проблемы по электрике не решили ни в &quot;Евро Авто&quot;, ни &quot;Салова-70&quot;. За что благодарен этим специалистам. Спасибо! Оценка Отлично.</p>
+        <button class="rev-more" onclick="toggleRev(2, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/20289515/Dx19ku7YXoRX7yRXmVUyA7ta5c-1/100x100" alt="Евгений А." loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Евгений А.</div><div class="rev-meta">Знаток города 7 уровня · 08.05.2024</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt3">Нужно было сделать развал-схождение на ваз 2106, сделали в лучшем виде и оперативно</p>
+        <button class="rev-more" onclick="toggleRev(3, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/17694366/2YfaDruZ2fYnxisvfzRADWyVptw-1/100x100" alt="лошадка" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">лошадка</div><div class="rev-meta">Знаток города 6 уровня · 02.05.2024</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt4">Отличный автосервис, рядом магазин и все расходники в наличии, огромное спасибо мастеру диагностики, сразу определил непростую неисправность. Цены демократичные, при необходимости проведения следующего ТО приеду снова</p>
+        <button class="rev-more" onclick="toggleRev(4, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/20289515/GKZd1L5rDQ5EtfqA1Whu6QsgZx4-1/100x100" alt="Ирина Павлоцкая" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Ирина Павлоцкая</div><div class="rev-meta">Знаток города 7 уровня · 02.01.2024</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt5">Ремонтирую автомобили только здесь уже более 15 лет</p>
+        <button class="rev-more" onclick="toggleRev(5, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/47747/0r-1/100x100" alt="Зоя Алашеева" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Зоя Алашеева</div><div class="rev-meta">Знаток города 7 уровня · 03.12.2023</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt6">Чинюсь здесь с 1992 года. Отличные ребята. Всем спасибо, особенно Дмитрию Твардовскому</p>
+        <button class="rev-more" onclick="toggleRev(6, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/37154/0d-4/100x100" alt="Olga Nurutdinova" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Olga Nurutdinova</div><div class="rev-meta">Знаток города 6 уровня · 07.10.2023</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt7">Отличный сервис! 
+Доброжелательное отношение и всегда качественная помощь!</p>
+        <button class="rev-more" onclick="toggleRev(7, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/36777/0r-6/100x100" alt="михаил щелкунов" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">михаил щелкунов</div><div class="rev-meta">Знаток города 10 уровня · 20.09.2023</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt8">Цены приемлемые, заезжал с проблемами по выхлопу, затем с электрикой, все починили, разговаривают по делу без фантазий.</p>
+        <button class="rev-more" onclick="toggleRev(8, this)">Читать полностью</button>
+      </article>
+      <article class="rev reveal">
+        <div class="rev-top">
+          <img class="rev-ava" src="https://avatars.mds.yandex.net/get-yapic/26057/0m-6/100x100" alt="Алексей Луконин" loading="lazy" onerror="this.style.visibility='hidden'">
+          <div><div class="rev-name">Алексей Луконин</div><div class="rev-meta">Знаток города 14 уровня · 07.06.2023</div></div>
+        </div>
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text clamp" id="rt9">Раньше часто здесь обслуживался. Пару лет назад переехал жить в другой конец города. На днях приехал починить подвеску и поменять масло. Все четко, быстро сделали. Рядом магазин автозапчастей. Мастер проводил к менеджеру магазина. Мне подобрали сайлентблоки и стойки стабилизатора. Сравнил цены на запчасти. Оказались очень даже неплохие. Ниже многих интернет магазином запчастей. 
+Однозначно рекомендую данный сервис. По возможности буду сюда снова приезжать. Ребята молодцы!!!</p>
+        <button class="rev-more" onclick="toggleRev(9, this)">Читать полностью</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Как нас найти</div><h2>Контакты и карта</h2></div>
+      <p class="lead" style="margin:0">ул. Савушкина, 89, Санкт-Петербург</p>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe src="https://yandex.ru/map-widget/v1/?ol=biz&oid=1525171193&z=16&lang=ru_RU" allowfullscreen title="Стар-Д на карте"></iframe>
+      <div class="contacts">
+        <h3>Телефоны</h3>
+        <div class="big"><a href="tel:+79013067874">+7 (901) 306-78-74</a><br><a href="tel:+78124300034">+7 (812) 430-00-34</a></div>
+        <h3>Адрес</h3><p>Санкт-Петербург, улица Савушкина, 89</p>
+        <h3>Часы работы</h3><p>ежедневно, 08:30–20:30</p>
+        <h3>Мы на связи</h3>
+        <div class="socials"><a href="https://t.me/StarD" target="_blank" rel="noopener">Telegram</a><a href="https://vk.ru/cmap_d" target="_blank" rel="noopener">VK</a></div>
+        <div style="margin-top:26px"><button class="btn btn-primary" onclick="openModal()">Записаться</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div><h2>Заедьте — посмотрим</h2><p>Опишите проблему по телефону: подскажем стоимость и когда лучше приехать.</p></div>
+      <button class="btn btn-primary" onclick="openModal()">Оставить заявку</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="logo" style="font-size:18px"><span class="logo-mark" style="width:28px;height:28px;font-size:12px">СД</span>СТАР<b>-</b>Д</div>
+      <div>ул. Савушкина, 89, Санкт-Петербург · ежедневно, 08:30–20:30</div>
+      <div><a href="tel:+79013067874">+7 (901) 306-78-74</a> · <a href="tel:+78124300034">+7 (812) 430-00-34</a></div>
+    </div>
+    <p class="foot-note">© 2026 Стар-Д. Не является публичной офертой. Фото и отзывы — из открытой карточки организации на Яндекс.Картах. Показаны отзывы с оценкой 5. Демонстрационный сайт.</p>
+  </div>
+</footer>
+
+<div class="overlay" id="ov" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="close" onclick="closeModal()">&times;</button>
+    <h3>Запись в сервис</h3>
+    <p>Оставьте номер — перезвоним и подберём удобное время.</p>
+    <form onsubmit="event.preventDefault();this.reset();closeModal();alert('Заявка отправлена. Мы перезвоним.');">
+      <input type="text" placeholder="Ваше имя" required>
+      <input type="tel" placeholder="Телефон" required>
+      <input type="text" placeholder="Марка и модель автомобиля">
+      <select>
+        <option>ТО и замена масла</option>
+        <option>Кондиционер</option>
+        <option>Электрика</option>
+        <option>Ходовая</option>
+        <option>Другое</option>
+      </select>
+      <button class="btn btn-primary" type="submit">Записаться</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const hdr = document.getElementById('hdr');
+  addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 40), { passive: true });
+  function toggleRev(i, btn) {
+    const p = document.getElementById('rt' + i);
+    const open = p.classList.toggle('clamp');
+    btn.textContent = open ? 'Читать полностью' : 'Свернуть';
+  }
+  const openModal = () => { document.getElementById('ov').classList.add('on'); document.body.style.overflow = 'hidden'; };
+  const closeModal = () => { document.getElementById('ov').classList.remove('on'); document.body.style.overflow = ''; };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
